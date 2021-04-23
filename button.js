@@ -1,17 +1,30 @@
 import React, { useState, useCallback } from "react";
 import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
 
-const Button = ({ onFocus }) => {
+const Button = ({ onPress, onFocus }) => {
   const [focused, setFocused] = useState(false);
+
+  const handleOnPress = useCallback(() => {
+    setFocused(true);
+    onPress();
+  }, []);
+
   const handleOnFocus = useCallback(() => {
     setFocused(true);
     onFocus();
   }, []);
+
   const handleOnBlur = useCallback(() => {
     setFocused(false);
   }, []);
+
   return (
-    <TouchableWithoutFeedback onFocus={handleOnFocus} onBlur={handleOnBlur}>
+    <TouchableWithoutFeedback
+      onPressIn={handleOnPress}
+      onPressOut={handleOnBlur}
+      onFocus={handleOnFocus}
+      onBlur={handleOnBlur}
+    >
       <View style={[styles.container, focused ? styles.focused : null]} />
     </TouchableWithoutFeedback>
   );
@@ -19,9 +32,9 @@ const Button = ({ onFocus }) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 80,
-    width: 80,
-    marginHorizontal: 10,
+    height: 60,
+    width: 60,
+    margin: 5,
     backgroundColor: "#555",
     borderColor: "#555",
     borderRadius: 5,

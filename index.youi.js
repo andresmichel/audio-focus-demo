@@ -1,5 +1,6 @@
 import React, { useEffect, useCallback } from "react";
 import { AppRegistry, SafeAreaView, StyleSheet } from "react-native";
+import { FormFactor } from "@youi/react-native-youi";
 import { Audio } from "@youi/audio-tools";
 import Button from "./button";
 
@@ -16,10 +17,10 @@ const YiReactApp = () => {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <Button onFocus={play} />
-      <Button onFocus={play} />
-      <Button onFocus={play} />
-      <Button onFocus={play} />
+      <Button onPress={play} onFocus={play} />
+      <Button onPress={play} onFocus={play} />
+      <Button onPress={play} onFocus={play} />
+      <Button onPress={play} onFocus={play} />
     </SafeAreaView>
   );
 };
@@ -27,7 +28,7 @@ const YiReactApp = () => {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    flexDirection: "row",
+    flexDirection: FormFactor.isTV ? "row" : "column",
     backgroundColor: "#000",
     justifyContent: "center",
     alignItems: "center",
