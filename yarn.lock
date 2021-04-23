@@ -1006,6 +1006,11 @@
   dependencies:
     "@types/yargs-parser" "*"
 
+"@youi/audio-tools@^1.0.0":
+  version "1.0.0"
+  resolved "https://youi.jfrog.io/youi/api/npm/jspkg/@youi/audio-tools/-/@youi/audio-tools-1.0.0.tgz#dc248562f40eb8bc701b5c628c584f61ece129e2"
+  integrity sha1-3CSFYvQOuLxwG1xijFhPYezhKeI=
+
 "@youi/babel-plugin-react-native-youi@1.0.4":
   version "1.0.4"
   resolved "https://youi.jfrog.io/youi/api/npm/jspkg/@youi/babel-plugin-react-native-youi/-/@youi/babel-plugin-react-native-youi-1.0.4.tgz#2a46d4046670cfb2e69fcce6ce55d99f91a20f74"
