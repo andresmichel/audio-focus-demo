@@ -33,11 +33,11 @@ const Button = ({ onPress, onFocus }) => {
 const styles = StyleSheet.create({
   container: {
     height: 60,
-    width: 60,
+    width: 80,
     margin: 5,
     backgroundColor: "#555",
     borderColor: "#555",
-    borderRadius: 5,
+    borderRadius: 10,
     borderWidth: 2,
   },
   focused: {
