@@ -35,13 +35,13 @@ const styles = StyleSheet.create({
     height: 60,
     width: 80,
     margin: 5,
-    backgroundColor: "#555",
-    borderColor: "#555",
+    backgroundColor: "#272E37",
+    borderColor: "#272E37",
     borderRadius: 10,
     borderWidth: 2,
   },
   focused: {
-    borderColor: "cyan",
+    borderColor: "#326DFF",
   },
 });
 

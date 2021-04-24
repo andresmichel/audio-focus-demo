@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     flexDirection: FormFactor.isTV ? "row" : "column",
-    backgroundColor: "#000",
+    backgroundColor: "#060708",
     justifyContent: "center",
     alignItems: "center",
   },
